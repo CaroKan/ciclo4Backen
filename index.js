@@ -1,39 +1,10 @@
-const {ApolloServer, gql} = require('apollo-server');
+const {ApolloServer} = require('apollo-server');
+const typeDefs = require('./db/schema');
+const resolvers = require('./db/resolvers');
+const conectarDB = require('./config/db');
 
-
-
-// Schema
-const typeDefs = gql`
-    type Curso{
-        titulo:String
-        tecnologia:String
-    }
-
-    type Query{
-        obtenerCursos: Curso
-    }
-`;
-const cursos=[
-    {
-        titulo:'JavaScrpt Moderno',
-        tecnologia:'JavaScrpt ES6',
-    },
-    {
-        titulo:'React',
-        tecnologia:'React',
-    },
-    {
-        titulo:'Node Moderno',
-        tecnologia:'React',
-    },
-]
-
-//resolver
-const resolvers={
-    Query:{
-        obtenerCursos: () => cursos[0]
-    }
-}
+//Conectar a la base de datos
+conectarDB ();
 
 // servidor
 const server = new ApolloServer({
