@@ -1,0 +1,30 @@
+{
+  "name": "backencrm",
+  "version": "1.0.0",
+  "description": "Backen para el proyecto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaroKan/ciclo4Backen.git"
+  },
+  "author": "Fabio Nelson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaroKan/ciclo4Backen/issues"
+  },
+  "homepage": "https://github.com/CaroKan/ciclo4Backen#readme",
+  "dependencies": {
+    "apollo-server": "^3.10.3",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
